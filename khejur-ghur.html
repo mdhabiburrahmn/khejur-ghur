@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>খাঁটি খেজুর গুড় - শীতের আসল স্বাদ</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-amber: #8B4513;
+      --secondary-amber: #D2691E;
+      --accent-gold: #FF8C00;
+      --light-bg: #FFF8DC;
+      --card-bg: #FFFFFF;
+      --text-dark: #2B1810;
+      --text-muted: #6C757D;
+    }
+
+    body {
+      font-family: 'Hind Siliguri', sans-serif;
+      background-color: #FFFDF9;
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    .bg-hero {
+      background: linear-gradient(135deg, #2B1810 0%, #5C2E0B 50%, #8B4513 100%);
+      color: #FFFFFF;
+      padding: 60px 0 80px;
+    }
+
+    .badge-tradition {
+      background-color: var(--accent-gold);
+      color: #000;
+      font-weight: 700;
+      padding: 6px 16px;
+      border-radius: 50px;
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+
+    .btn-cta {
+      background-color: var(--accent-gold);
+      color: #000;
+      font-weight: 700;
+      font-size: 1.25rem;
+      padding: 14px 36px;
+      border-radius: 8px;
+      border: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(255, 140, 0, 0.4);
+    }
+
+    .btn-cta:hover {
+      background-color: #e07b00;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    .section-title {
+      font-weight: 700;
+      color: var(--primary-amber);
+      margin-bottom: 15px;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: var(--accent-gold);
+      margin: 10px auto 0;
+    }
+
+    .card-custom {
+      border: 1px solid #EAEAEE;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+      background: var(--card-bg);
+    }
+
+    .card-custom:hover {
+      transform: translateY(-5px);
+    }
+
+    .price-tag {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--secondary-amber);
+    }
+
+    .pkg-card {
+      border: 2px solid #EAEAEE;
+      border-radius: 12px;
+      padding: 24px;
+      background: #FFF;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .pkg-card.popular {
+      border-color: var(--accent-gold);
+      background: #FFFDF5;
+      position: relative;
+    }
+
+    .popular-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--accent-gold);
+      color: #000;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 2px 14px;
+      border-radius: 20px;
+    }
+
+    .order-form-container {
+      background: #FFFFFF;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      border: 2px solid var(--accent-gold);
+    }
+
+    .step-number {
+      width: 45px;
+      height: 45px;
+      background: var(--primary-amber);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin: 0 auto 15px;
+    }
+
+    .accordion-button:not(.collapsed) {
+      background-color: var(--light-bg);
+      color: var(--primary-amber);
+      font-weight: 600;
+    }
+
+    .placeholder-img {
+      background: #EFEBE9;
+      color: #8D6E63;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ১. Hero Section -->
+  <header class="bg-hero text-center text-lg-start">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <span class="badge-tradition">শীতের ঐতিহ্য • খাঁটি স্বাদের নিশ্চয়তা</span>
+          <h1 class="display-5 fw-bold mb-3">শীতের আমেজে গ্রামবাংলার আসল স্বাদ – খাঁটি খেজুর গুড়!</h1>
+          <p class="lead mb-4">প্রাকৃতিক মিষ্টি স্বাদ আর গ্রামবাংলার ঐতিহ্যের মেলবন্ধন। সংগ্রহ করুন সুস্বাদু খেজুরের গুড়, যা আপনার পিঠা-পায়েস ও প্রতিদিনের খাবারে যোগ করবে অন্যরকম আনন্দ।</p>
+          <ul class="list-unstyled mb-4">
+            <li class="mb-2">✓ বাছাইকৃত খেজুরের রস থেকে তৈরি</li>
+            <li class="mb-2">✓ ঐতিহ্যবাহী গাছিদের হাতে প্রস্তুত</li>
+            <li class="mb-2">✓ সম্পূর্ণ কেমিক্যাল ও ভেজাল মুক্ত</li>
+            <li class="mb-2">✓ যত্নসহকারে প্যাকেজিং ও সারা দেশে ডেলিভারি</li>
+          </ul>
+          <a href="#order-section" class="btn btn-cta">এখনই অর্ডার করুন</a>
+          <p class="small text-warning mt-2">* সীমিত মৌসুমের সংগ্রহ – স্টক শেষ হওয়ার আগেই অর্ডার করুন!</p>
+        </div>
+        <div class="col-lg-6">
+          <div class="placeholder-img rounded shadow-lg" style="height: 380px;">
+            <div class="text-center p-4">
+              <h4>[গাছিদের রস সংগ্রহের ছবি/ভিডিও]</h4>
+              <p class="mb-0 text-muted">রাজশাহীর বাগান থেকে সরাসরি সংগৃহীত খাঁটি খেজুর গুড়</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ২. Problem & Solution Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center max-width-700 mx-auto mb-5">
+        <h2 class="section-title">আসল খেজুর গুড় খুঁজে পাওয়া কি কঠিন?</h2>
+        <p class="text-muted">আজকাল বাজারে চিনি মিশানো, কেমিক্যালযুক্ত বা ভেজাল গুড়ে সয়লাব। কাঙ্ক্ষিত সেই গ্রামবাংলার চেনা স্বাদ ও সুবাস খুঁজে পাওয়াই যেন দায়!</p>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <div class="placeholder-img" style="height: 300px;">
+            <span>[আসল ঝোলা ও পাটালি গুড়ের ছবি]</span>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h3 class="h4 fw-bold mb-3">আমরা দিচ্ছি খাঁটি ও ঐতিহ্যবাহী স্বাদের শতভাগ নিশ্চয়তা</h3>
+          <p>আমাদের প্রতিটি ফোঁটা গুড় সংগ্রহ করা হয় ঐতিহ্যবাহী নিয়মে খেজুর গাছ থেকে। কোনো কৃত্রিম রঙ, সুবাস বা কেমিক্যাল ব্যবহার করা হয় না।</p>
+          <div class="row g-3 mt-2">
+            <div class="col-6">
+              <div class="p-3 bg-white rounded border">
+                <h5 class="h6 fw-bold text-dark mb-1">স্বাদে ঐতিহ্যের ছোঁয়া</h5>
+                <p class="small text-muted mb-0">প্রাকৃতিক খেজুরের রসের আসল সুবাস।</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="p-3 bg-white rounded border">
+                <h5 class="h6 fw-bold text-dark mb-1">সেরা মান নিশ্চিত</h5>
+                <p class="small text-muted mb-0">পরিবার ও অতিথি আপ্যায়নে সেরা।</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ৩. Product Showcase Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">আপনার পছন্দের খেজুর গুড়</h2>
+        <p class="text-muted">আপনার প্রয়োজন অনুযায়ী বেছে নিন আপনার পছন্দের গুড়</p>
+      </div>
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-md-4">
+          <div class="card card-custom h-100">
+            <div class="placeholder-img card-img-top" style="height: 220px;">[ঝোলা গুড় প্রোডাক্ট ছবি]</div>
+            <div class="card-body d-flex flex-column text-center">
+              <h3 class="h5 card-title fw-bold">রাজশাহী স্পেশাল ঝোলা খেজুর গুড়</h3>
+              <p class="card-text text-muted small flex-grow-1">মিষ্টি ঘ্রাণ ও নরম তরল গুড়। চিতই পিঠা, রুটি, পায়েস ও সকালের নাশতায় উপভোগ করার জন্য সেরা।</p>
+              <div class="mb-3">
+                <span class="price-tag">৳ ৫৫০</span> / কেজি
+              </div>
+              <a href="#order-section" onclick="selectProduct('ঝোলা খেজুর গুড়')" class="btn btn-outline-dark fw-bold w-100">অর্ডার করুন</a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-md-4">
+          <div class="card card-custom h-100">
+            <div class="placeholder-img card-img-top" style="height: 220px;">[পাটালি গুড় প্রোডাক্ট ছবি]</div>
+            <div class="card-body d-flex flex-column text-center">
+              <h3 class="h5 card-title fw-bold">খুরি / গোল পাটালি খেজুর গুড়</h3>
+              <p class="card-text text-muted small flex-grow-1">ঐতিহ্যবাহী আকৃতির সুস্বাদু জমাট পাটালি গুড়। ভাপা পিঠা, পায়েস ও বিভিন্ন মিষ্টি তৈরিতে দারুণ উপযোগী।</p>
+              <div class="mb-3">
+                <span class="price-tag">৳ ৬০০</span> / কেজি
+              </div>
+              <a href="#order-section" onclick="selectProduct('পাটালি খেজুর গুড়')" class="btn btn-outline-dark fw-bold w-100">অর্ডার করুন</a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-md-4">
+          <div class="card card-custom h-100">
+            <div class="placeholder-img card-img-top" style="height: 220px;">[দানাদার গুড় প্রোডাক্ট ছবি]</div>
+            <div class="card-body d-flex flex-column text-center">
+              <h3 class="h5 card-title fw-bold">প্রিমিয়াম দানাদার খেজুর গুড়</h3>
+              <p class="card-text text-muted small flex-grow-1">দানাদার গঠন ও চমৎকার প্রাকৃতিক সুবাস। সেমাই, পায়েস, ক্ষীর ও যেকোনো মিষ্টি খাবারের স্বাদ বহুগুণ বাড়ায়।</p>
+              <div class="mb-3">
+                <span class="price-tag">৳ ৬৫০</span> / কেজি
+              </div>
+              <a href="#order-section" onclick="selectProduct('দানাদার খেজুর গুড়')" class="btn btn-outline-dark fw-bold w-100">অর্ডার করুন</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ৪. Why Choose Us Section -->
+  <section class="py-5 bg-light text-center">
+    <div class="container">
+      <h2 class="section-title mb-5">কেন আমাদের কাছ থেকে কিনবেন?</h2>
+      <div class="row g-4">
+        <div class="col-md-3 col-6">
+          <div class="p-4 bg-white rounded shadow-sm h-100">
+            <div class="fs-1 text-warning mb-2">🌿</div>
+            <h4 class="h6 fw-bold">বাছাইকৃত রস</h4>
+            <p class="small text-muted mb-0">নিজস্ব তদারকিতে গাছ থেকে সরাসরি সংগ্রহ ও তৈরি।</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="p-4 bg-white rounded shadow-sm h-100">
+            <div class="fs-1 text-warning mb-2">🔥</div>
+            <h4 class="h6 fw-bold">ঐতিহ্যবাহী প্রস্তুতি</h4>
+            <p class="small text-muted mb-0">অভিজ্ঞ গাছিদের মাধ্যমে মাটির উনুনে জ্বাল দেওয়া।</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="p-4 bg-white rounded shadow-sm h-100">
+            <div class="fs-1 text-warning mb-2">📦</div>
+            <h4 class="h6 fw-bold">নিরাপদ প্যাকেজিং</h4>
+            <p class="small text-muted mb-0">লিক-প্রুফ ফুড-গ্রেড জারে নিখুঁত প্যাকেজিং।</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="p-4 bg-white rounded shadow-sm h-100">
+            <div class="fs-1 text-warning mb-2">🚚</div>
+            <h4 class="h6 fw-bold">সারা দেশে ডেলিভারি</h4>
+            <p class="small text-muted mb-0">দ্রুততম সময়ে ক্যাশ অন ডেলিভারি সুবিধা।</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ৫. Emotional Section -->
+  <section class="py-5 text-white" style="background: linear-gradient(rgba(43, 24, 16, 0.85), rgba(43, 24, 16, 0.85)), url('https://via.placeholder.com/1200x400') center/cover;">
+    <div class="container text-center max-width-700">
+      <h2 class="fw-bold mb-3">শীতের সকালে পারিবারিক পিঠাপুলির আনন্দ!</h2>
+      <p class="lead mb-4">শীত মানেই পিঠা-পায়েস, আর পিঠা-পায়েস মানেই খাঁটি খেজুর গুড়! মায়ের হাতের ধোঁয়া ওঠা ভাপা পিঠা, দুধ-চিতই, পাটিসাপটা কিংবা এক বাটি পায়েস—প্রতিটি খাবারের আসল পূর্ণতা ফিরে পাক খাঁটি খেজুর গুড়ের মিষ্টি সুবাসে।</p>
+      <p class="fs-5 text-warning fw-semibold mb-0">ফিরে আসুক শৈশবের সেই চেনা স্বাদ, পরিবারের সঙ্গে কাটুক আনন্দময় মুহূর্ত।</p>
+    </div>
+  </section>
+
+  <!-- ৬. Special Offer Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">বিশেষ শীতকালীন কম্বো অফার</h2>
+        <p class="text-muted">আপনার পরিবারের চাহিদানুযায়ী সাশ্রয়ী প্যাকেজ বেছে নিন</p>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <!-- Pkg 1 -->
+        <div class="col-md-4">
+          <div class="pkg-card h-100">
+            <h3 class="h5 fw-bold">ছোট প্যাক</h3>
+            <p class="text-muted small">ট্রায়াল ও ছোট পরিবারের জন্য</p>
+            <div class="my-3">
+              <span class="fs-3 fw-bold text-dark">১ কেজি</span>
+            </div>
+            <div class="price-tag mb-3">৳ ৫৫০</div>
+            <a href="#order-section" onclick="selectPackage('ছোট প্যাক (১ কেজি)')" class="btn btn-outline-dark w-100">অর্ডার করুন</a>
+          </div>
+        </div>
+        <!-- Pkg 2 -->
+        <div class="col-md-4">
+          <div class="pkg-card popular h-100">
+            <span class="popular-badge">সর্বাধিক জনপ্রিয়</span>
+            <h3 class="h5 fw-bold">ফ্যামিলি প্যাক</h3>
+            <p class="text-muted small">মাঝারি পরিবারের জন্য সেরা পছন্দ</p>
+            <div class="my-3">
+              <span class="fs-3 fw-bold text-dark">৩ কেজি</span>
+            </div>
+            <div class="price-tag mb-3">৳ ১,৫৫০ <del class="fs-6 text-muted">৳ ১,650</del></div>
+            <a href="#order-section" onclick="selectPackage('ফ্যামিলি প্যাক (৩ কেজি)')" class="btn btn-cta w-100">অর্ডার করুন</a>
+          </div>
+        </div>
+        <!-- Pkg 3 -->
+        <div class="col-md-4">
+          <div class="pkg-card h-100">
+            <h3 class="h5 fw-bold">মেগা প্যাক</h3>
+            <p class="text-muted small">পুরো শীতের স্টকের জন্য সাশ্রয়ী</p>
+            <div class="my-3">
+              <span class="fs-3 fw-bold text-dark">৫ কেজি</span>
+            </div>
+            <div class="price-tag mb-3">৳ ২,৫০০ <del class="fs-6 text-muted">৳ ২,৭৫০</del></div>
+            <a href="#order-section" onclick="selectPackage('মেগা প্যাক (৫ কেজি)')" class="btn btn-outline-dark w-100">অর্ডার করুন</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ৭. Customer Reviews Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">আমাদের সন্তুষ্ট ক্রেতাদের মতামত</h2>
+        <p class="text-muted">শতভাগ খাঁটি গুড় পেয়ে গ্রাহকরা যা বলছেন</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded shadow-sm h-100">
+            <div class="text-warning mb-2">★★★★★</div>
+            <p class="small text-muted">"গুড়ের ঘ্রাণ ও স্বাদ বেশ ভালো লেগেছে। ভাপা পিঠা বানিয়েছিলাম, একদম শৈশবের গ্রামের বাড়ির কথা মনে পড়ে গেল। ধন্যবাদ খাঁটি পণ্য দেওয়ার জন্য।"</p>
+            <h4 class="h6 fw-bold mb-0">— ফারজানা রহমান (ঢাকা)</h4>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded shadow-sm h-100">
+            <div class="text-warning mb-2">★★★★★</div>
+            <p class="small text-muted">"প্যাকেজিং খুবই সুন্দর ও নিরাপদ ছিল, একটুও লিক করেনি। ২ দিনের মধ্যে হাতে পেয়েছি। গুড়টাও বেশ খাঁটি। আবার অর্ডার করব ইনশাআল্লাহ।"</p>
+            <h4 class="h6 fw-bold mb-0">— মো: রফিকুল ইসলাম (চট্টগ্রাম)</h4>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded shadow-sm h-100">
+            <div class="text-warning mb-2">★★★★★</div>
+            <p class="small text-muted">"ঝোলা গুড়টা জাস্ট অসাধারণ! দুধে দিলে দুধ ভেঙে যায় না, এটাই প্রমাণ করে যে গুড়ে কোনো ভেজাল বা কেমিক্যাল নেই।"</p>
+            <h4 class="h6 fw-bold mb-0">— তানিয়া আক্তার (সিলেট)</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ৮. Order Process Section -->
+  <section class="py-5 text-center">
+    <div class="container">
+      <h2 class="section-title mb-5">সহজ ৩টি ধাপে অর্ডার সম্পন্ন করুন</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="step-number">১</div>
+          <h4 class="h5 fw-bold">পণ্য ও পরিমাণ নির্বাচন করুন</h4>
+          <p class="small text-muted">আপনার পছন্দের গুড়ের ধরণ এবং কত কেজি লাগবে তা নির্ধারণ করুন।</p>
+        </div>
+        <div class="col-md-4">
+          <div class="step-number">২</div>
+          <h4 class="h5 fw-bold">অর্ডার ফর্ম পূরণ করুন</h4>
+          <p class="small text-muted">আপনার নাম, সঠিক মোবাইল নম্বর এবং সম্পূর্ণ ডেলিভারি ঠিকানা দিন।</p>
+        </div>
+        <div class="col-md-4">
+          <div class="step-number">৩</div>
+          <h4 class="h5 fw-bold">পণ্য হাতে পেয়ে পেমেন্ট করুন</h4>
+          <p class="small text-muted">ডেলিভারিম্যানের সামনে পণ্য চেক করে নিশ্চিন্তে ক্যাশ অন ডেলিভারিতে টাকা দিন।</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ৯. Order Form Section -->
+  <section id="order-section" class="py-5 bg-light">
+    <div class="container max-width-700 mx-auto" style="max-width: 700px;">
+      <div class="order-form-container">
+        <h2 class="h3 fw-bold text-center text-dark mb-2">আজই অর্ডার করুন!</h2>
+        <p class="text-center text-muted mb-4">অর্ডার নিশ্চিত করতে নিচের তথ্যগুলো সঠিকভা‌বে পূরণ করুন</p>
+        
+        <form>
+          <div class="mb-3">
+            <label class="form-label fw-bold">আপনার নাম *</label>
+            <input type="text" class="form-control form-control-lg" placeholder="আপনার পুরো নাম লিখুন" required>
+          </div>
+          
+          <div class="mb-3">
+            <label class="form-label fw-bold">মোবাইল নম্বর *</label>
+            <input type="tel" class="form-control form-control-lg" placeholder="১১ ডিজিটের মোবাইল নম্বর দিন" required>
+          </div>
+          
+          <div class="mb-3">
+            <label class="form-label fw-bold">পছন্দের গুড়ের ধরন *</label>
+            <select class="form-select form-select-lg" id="productSelect">
+              <option value="ঝোলা খেজুর গুড়">ঝোলা খেজুর গুড়</option>
+              <option value="পাটালি খেজুর গুড়">পাটালি খেজুর গুড়</option>
+              <option value="দানাদার খেজুর গুড়">দানাদার খেজুর গুড়</option>
+              <option value="কম্বো প্যাক">বিশেষ কম্বো প্যাক</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label fw-bold">পরিমাণ *</label>
+            <select class="form-select form-select-lg">
+              <option value="1">১ কেজি</option>
+              <option value="2">২ কেজি</option>
+              <option value="3">৩ কেজি (ফ্যামিলি প্যাক)</option>
+              <option value="5">৫ কেজি (মেগা প্যাক)</option>
+            </select>
+          </div>
+          
+          <div class="mb-3">
+            <label class="form-label fw-bold">সম্পূর্ণ ডেলিভারি ঠিকানা *</label>
+            <textarea class="form-control" rows="3" placeholder="জেলা, থানা/উপজেলা এবং এলাকার নাম লিখুন" required></textarea>
+          </div>
+
+          <div class="mb-4">
+            <label class="form-label fw-bold">ডেলিভারি এরিয়া</label>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="radio" name="delivery" id="insideDhaka" checked>
+              <label class="form-check-label" for="insideDhaka">
+                ঢাকার ভেতরে (ডেলিভারি চার্জ ৳৮০)
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="delivery" id="outsideDhaka">
+              <label class="form-check-label" for="outsideDhaka">
+                ঢাকার বাইরে (ডেলিভারি চার্জ ৳১৫০)
+              </label>
+            </div>
+          </div>
+          
+          <button type="submit" class="btn btn-cta w-100 py-3 fs-5">অর্ডার কনফার্ম করুন</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ১০. FAQ Section -->
+  <section class="py-5">
+    <div class="container max-width-700" style="max-width: 800px;">
+      <h2 class="section-title text-center mb-5">সাধারণ জিজ্ঞাসা (FAQ)</h2>
+      
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+              আপমাদের কাছে কী কী ধরনের গুড় পাওয়া যায়?
+            </button>
+          </h2>
+          <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-muted">
+              আমাদের কাছে মূলত ৩ ধরণের খাঁটি খেজুর গুড় পাওয়া যায়: ঝোলা গুড়, পাটালি গুড় এবং প্রিমিয়াম দানাদার গুড়।
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+              আপনারা কীভাবে খাঁটি গুড়ের নিশ্চয়তা দিচ্ছেন?
+            </button>
+          </h2>
+          <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-muted">
+              আমরা কোনো মধ্যস্বত্বভোগী ছাড়া সরাসরি রাজশাহীর নিজস্ব তত্ত্বাবধানে অভিজ্ঞ গাছিদের মাধ্যমে খেজুরের রস সংগ্রহ করে ঐতিহ্যবাহী মাটির উনুনে গুড় তৈরি করি। এতে কোনো প্রকার চিনি বা কেমিক্যাল মেশানো হয় না।
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+              সারা বাংলাদেশে কি হোম ডেলিভারি দেওয়া হয়?
+            </button>
+          </h2>
+          <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-muted">
+              হ্যাঁ, আমরা নির্ভরযোগ্য কুরিয়ার সার্ভিসের মাধ্যমে দেশের যেকোনো প্রান্তেই হোম ডেলিভারি সুবিধা দিয়ে থাকি।
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+              পেমেন্ট কীভাবে করব?
+            </button>
+          </h2>
+          <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-muted">
+              আপাতত আমরা সম্পূর্ণ "ক্যাশ অন ডেলিভারি" (পণ্য হাতে পেয়ে পেমেন্ট) সুবিধা দিয়ে থাকি। চাইলে বিকাশ/নগদের মাধ্যমেও অগ্রিম পেমেন্ট করতে পারবেন।
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ১১. Final CTA & Footer -->
+  <footer class="bg-hero text-center py-5">
+    <div class="container">
+      <h2 class="fw-bold mb-3">শীতের মিষ্টি স্বাদ উপভোগ করতে আর দেরি কেন?</h2>
+      <p class="lead mb-4">আপনার পরিবারের জন্য নিয়ে আসুন শতভাগ খাঁটি খেজুর গুড়ের চেনা ঐতিহ্য। স্টক সীমিত!</p>
+      <div class="mb-4">
+        <a href="#order-section" class="btn btn-cta me-md-2 mb-2 mb-md-0">এখনই অর্ডার করুন</a>
+      </div>
+      <p class="fs-5 mb-0">অর্ডার করতে কল করুন: <a href="tel:01700000000" class="text-warning text-decoration-none fw-bold">০১৭০০-০০০০০০</a></p>
+      <hr class="my-4 opacity-25">
+      <p class="small text-white-50 mb-0">&copy; ২০২৬ খাঁটি খেজুর গুড়। সর্বস্বত্ব সংরক্ষিত।</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function selectProduct(productName) {
+      document.getElementById('productSelect').value = productName;
+    }
+    function selectPackage(pkgName) {
+      document.getElementById('productSelect').value = 'কম্বো প্যাক';
+    }
+  </script>
+</body>
+</html>
